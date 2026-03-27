@@ -216,3 +216,20 @@ body.auth .phone-private{display:inline;}
 @media (max-width:980px){
   .donut-grid{grid-template-columns:1fr}
 }
+
+/* v17 fixes */
+.donut-grid{margin-top:20px;}
+.section-body{display:block}
+.donut-wrap{margin-top:10px}
+
+.bar-track{
+  height:10px;
+  background:#eef2f8;
+  border-radius:6px;
+  overflow:hidden;
+}
+.bar-fill{
+  height:100%;
+  background:linear-gradient(90deg,#0ea5e9,#a52ec9);
+  border-radius:6px;
+}
