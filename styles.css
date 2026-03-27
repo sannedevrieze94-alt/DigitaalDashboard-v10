@@ -290,3 +290,37 @@ body.auth .phone-private{display:inline;}
 @media (max-width:980px){
   .donut-grid{grid-template-columns:1fr !important}
 }
+
+/* v19 menu + cleanup */
+.preview-grid{display:none !important;}
+.top-actions{display:none;}
+
+.header-menu{
+  position:absolute;
+  right:20px;
+  top:20px;
+}
+.menu-btn{
+  background:#0ea5e9;
+  color:#fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:10px;
+}
+.menu-dropdown{
+  display:none;
+  position:absolute;
+  right:0;
+  top:45px;
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:10px;
+}
+.menu-dropdown a{
+  display:block;
+  padding:10px;
+  text-decoration:none;
+  color:#333;
+}
+.menu-open .menu-dropdown{display:block;}
