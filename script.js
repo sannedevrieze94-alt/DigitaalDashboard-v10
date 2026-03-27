@@ -82,6 +82,7 @@ function renderCaseDetail(){
     </div><div style="margin-top:16px;"><a class="btn primary" href="zaken.html">Terug naar lopende zaken</a></div></div></div>`;
 }
 document.addEventListener('DOMContentLoaded',()=>{
+  syncAuthClass();
   protectedCheck();
   const form=document.getElementById('login-form');
   if(form) form.addEventListener('submit',loginSubmit);
@@ -89,4 +90,32 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(logoutBtn) logoutBtn.addEventListener('click',logout);
   setupDemoSearch();
   renderCaseDetail();
+  setupMeetingStart();
 });
+
+
+function syncAuthClass(){
+  const authed = localStorage.getItem('pgax_demo_auth') === 'true';
+  document.body.classList.toggle('auth', authed);
+}
+
+function setupMeetingStart(){
+  const btn = document.getElementById('meetingStartBtn');
+  const status = document.getElementById('meetingStatus');
+  if(!btn || !status) return;
+  btn.addEventListener('click', () => {
+    const authed = localStorage.getItem('pgax_demo_auth') === 'true';
+    if(!authed){
+      status.className = 'meeting-status';
+      status.innerHTML = 'Inloggen is vereist om een vergadering te starten.';
+      return;
+    }
+    const now = new Date();
+    const time = now.toLocaleTimeString('nl-NL', {hour:'2-digit', minute:'2-digit'});
+    status.className = 'meeting-status active';
+    status.innerHTML = `
+      <strong>Vergadering gestart</strong><br>
+      Demo-vergadering actief sinds ${time}. Deelnemers kunnen nu fictief aanhaken vanuit OOV, AVIM en RIEC.
+    `;
+  });
+}
