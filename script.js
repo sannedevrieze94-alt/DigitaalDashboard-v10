@@ -1,44 +1,4 @@
 
-function protectedCheck(){
-  const gate = document.getElementById('protected-content');
-  const denied = document.getElementById('protected-denied');
-  const authed = localStorage.getItem('pgax_demo_auth') === 'true';
-  if(gate && denied){
-    gate.classList.toggle('hidden', !authed);
-    denied.classList.toggle('hidden', authed);
-  }
-}
-function loginSubmit(e){
-  e.preventDefault();
-  const user = document.getElementById('username').value.trim();
-  const pass = document.getElementById('password').value.trim();
-  const err = document.getElementById('login-error');
-  const ok = document.getElementById('login-success');
-  if(user === 'SDEV1' && pass === '12345'){
-    localStorage.setItem('pgax_demo_auth','true');
-    err.classList.add('hidden');
-    ok.classList.remove('hidden');
-    setTimeout(()=>{ window.location.href='zaken.html'; }, 500);
-  } else {
-    ok.classList.add('hidden');
-    err.classList.remove('hidden');
-  }
-}
-function logout(){
-  localStorage.removeItem('pgax_demo_auth');
-  window.location.href='login.html';
-}
-document.addEventListener('DOMContentLoaded', ()=>{
-  protectedCheck();
-  const form=document.getElementById('login-form');
-  if(form) form.addEventListener('submit', loginSubmit);
-  const logoutBtn=document.getElementById('logout-btn');
-  if(logoutBtn) logoutBtn.addEventListener('click', logout);
-  setupDemoSearch();
-  renderCaseDetail();
-});
-
-
 const demoRecords = [
   {
     person: "Jan de Boer",
@@ -77,6 +37,38 @@ const demoRecords = [
     partners: ["OOV", "Politie", "Arbeidsinspectie"]
   }
 ];
+
+function protectedCheck(){
+  const gate = document.getElementById('protected-content');
+  const denied = document.getElementById('protected-denied');
+  const authed = localStorage.getItem('pgax_demo_auth') === 'true';
+  if(gate && denied){
+    gate.classList.toggle('hidden', !authed);
+    denied.classList.toggle('hidden', authed);
+  }
+}
+
+function loginSubmit(e){
+  e.preventDefault();
+  const user = document.getElementById('username').value.trim();
+  const pass = document.getElementById('password').value.trim();
+  const err = document.getElementById('login-error');
+  const ok = document.getElementById('login-success');
+  if(user === 'SDEV1' && pass === '12345'){
+    localStorage.setItem('pgax_demo_auth','true');
+    err.classList.add('hidden');
+    ok.classList.remove('hidden');
+    setTimeout(()=>{ window.location.href='zaken.html'; }, 500);
+  } else {
+    ok.classList.add('hidden');
+    err.classList.remove('hidden');
+  }
+}
+
+function logout(){
+  localStorage.removeItem('pgax_demo_auth');
+  window.location.href='login.html';
+}
 
 function renderDemoResults(records){
   const container = document.getElementById('searchResults');
@@ -130,8 +122,6 @@ function setupDemoSearch(){
   });
 }
 
-
-
 function getCaseById(caseId){
   return demoRecords.find(r => r.caseId === caseId) || null;
 }
@@ -148,7 +138,7 @@ function renderCaseDetail(){
         <div class="eyebrow">Casusdetail</div>
         <h2>Casus niet gevonden</h2>
         <p>De gevraagde demo-casus bestaat niet of het ID ontbreekt.</p>
-        <a class="btn btn-primary" href="zaken.html">Terug naar lopende zaken</a>
+        <a class="btn primary" href="zaken.html">Terug naar lopende zaken</a>
       </section>`;
     return;
   }
@@ -192,9 +182,19 @@ function renderCaseDetail(){
           </div>
         </div>
         <div style="margin-top:16px;">
-          <a class="btn btn-primary" href="zaken.html">Terug naar lopende zaken</a>
+          <a class="btn primary" href="zaken.html">Terug naar lopende zaken</a>
         </div>
       </div>
     </section>
   `;
 }
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  protectedCheck();
+  const form=document.getElementById('login-form');
+  if(form) form.addEventListener('submit', loginSubmit);
+  const logoutBtn=document.getElementById('logout-btn');
+  if(logoutBtn) logoutBtn.addEventListener('click', logout);
+  setupDemoSearch();
+  renderCaseDetail();
+});

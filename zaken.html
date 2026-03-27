@@ -7,25 +7,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="dashboard">
+  <div class="app">
     
     <aside class="sidebar">
       <div class="brand">
-        <div class="brand-dot"></div>
-        <div class="brand-sub">Dashboardomgeving voor mensenhandel en ondermijning.</div>
+        <div class="brand-mark">PGA<span class="x">x</span></div>
+        <div class="brand-copy">Visueel geïnspireerde dashboardomgeving voor mensenhandel en ondermijning.</div>
       </div>
-      <nav class="side-nav"><a href="index.html" class="side-link "><span class="side-icon">◎</span><span>Dashboard</span></a>
-<a href="trends.html" class="side-link "><span class="side-icon">≋</span><span>Trends</span></a>
-<a href="cijfers.html" class="side-link "><span class="side-icon">▦</span><span>Cijfers</span></a>
-<a href="vergelijking.html" class="side-link "><span class="side-icon">⇄</span><span>Vergelijking</span></a>
-<a href="kaart.html" class="side-link "><span class="side-icon">⌖</span><span>Wijken</span></a>
-<a href="contacten.html" class="side-link "><span class="side-icon">◉</span><span>Contacten</span></a>
-<a href="bronnen.html" class="side-link "><span class="side-icon">◈</span><span>Bronnen</span></a>
-<a href="login.html" class="side-link active"><span class="side-icon">◌</span><span>Log In</span></a></nav>
+      <nav class="nav"><a href="index.html" class=""><span class="icon">◎</span><span>Dashboard</span></a>
+<a href="trends.html" class=""><span class="icon">≋</span><span>Trends</span></a>
+<a href="cijfers.html" class=""><span class="icon">▦</span><span>Cijfers</span></a>
+<a href="vergelijking.html" class=""><span class="icon">⇄</span><span>Vergelijking</span></a>
+<a href="kaart.html" class=""><span class="icon">⌖</span><span>Wijken</span></a>
+<a href="contacten.html" class=""><span class="icon">◉</span><span>Contacten</span></a>
+<a href="bronnen.html" class=""><span class="icon">◈</span><span>Bronnen</span></a>
+<a href="login.html" class="active"><span class="icon">◌</span><span>Log In</span></a></nav>
     </aside>
     
     <div class="main">
-      
       <header class="topbar">
         <div class="topbar-inner">
           <div class="tophead">
@@ -39,19 +38,17 @@
             <a class="btn" href="index.html">Dashboard</a>
             <a class="btn" href="kaart.html">Wijkrisico's</a>
             <a class="btn" href="contacten.html">Contactpersonen</a>
-            <a class="btn btn-primary" href="login.html">Log In</a>
+            <a class="btn primary" href="login.html">Log In</a>
           </div>
         </div>
       </header>
-    
       <main class="page">
         
-
 <section id="protected-denied" class="card">
   <div class="eyebrow">Afgeschermd</div>
   <h2>Geen toegang zonder Log In</h2>
   <p>Deze pagina is bedoeld als illustratie van een beschermde werkomgeving voor lopende zaken. Log eerst in met de demo-gegevens om deze laag te bekijken.</p>
-  <a class="btn btn-primary" href="login.html">Ga naar Log In</a>
+  <a class="btn primary" href="login.html">Ga naar Log In</a>
 </section>
 
 <section id="protected-content" class="hidden">
@@ -85,7 +82,7 @@
             <input id="searchAddress" type="text" placeholder="Bijvoorbeeld Hoofdstraat 18">
           </div>
           <div class="field" style="align-self:end;">
-            <button class="btn btn-primary" id="searchBtn">Zoeken</button>
+            <button class="btn primary" id="searchBtn">Zoeken</button>
           </div>
         </div>
         <div id="searchResults" class="search-results"></div>
@@ -99,25 +96,9 @@
       <table class="table">
         <thead><tr><th>Casus</th><th>Status</th><th>Regie</th><th>Partner aanhaken</th><th>Opmerking</th></tr></thead>
         <tbody>
-          <tr><td>Casus MH-001</td><td><span class="badge b-high">Actief</span></td><td>OOV</td><td>Politie, AVIM, Zorgpartner</td><td>Woon-werkafhankelijkheid en signalen uit dossier.</td></tr>
-          <tr><td>Casus MH-002</td><td><span class="badge b-mid">In duiding</span></td><td>Aandachtsfunctionaris</td><td>Arbeidsinspectie, RIEC</td><td>Werkgebied en arbeidsmigranten-context.</td></tr>
-          <tr><td>Casus MH-003</td><td><span class="badge b-low">Monitoren</span></td><td>Sociaal domein</td><td>Zorg- en Veiligheidshuis</td><td>Jeugdkwetsbaarheid en schuldsignalen.</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-</section>
-
-
-  <section class="section">
-    <div class="section-head"><h3>Actuele zaken – demo</h3><p>Voorbeeldweergave voor gemachtigde gebruikers.</p></div>
-    <div class="section-body">
-      <table class="table">
-        <thead><tr><th>Casus</th><th>Status</th><th>Regie</th><th>Partner aanhaken</th><th>Opmerking</th></tr></thead>
-        <tbody>
-          <tr><td>Casus MH-001</td><td><span class="badge b-high">Actief</span></td><td>OOV</td><td>Politie, AVIM, Zorgpartner</td><td>Woon-werkafhankelijkheid en signalen uit dossier.</td></tr>
-          <tr><td>Casus MH-002</td><td><span class="badge b-mid">In duiding</span></td><td>Aandachtsfunctionaris</td><td>Arbeidsinspectie, RIEC</td><td>Werkgebied en arbeidsmigranten-context.</td></tr>
-          <tr><td>Casus MH-003</td><td><span class="badge b-low">Monitoren</span></td><td>Sociaal domein</td><td>Zorg- en Veiligheidshuis</td><td>Jeugdkwetsbaarheid en schuldsignalen.</td></tr>
+          <tr><td>Casus MH-001</td><td><span class="badge high">Actief</span></td><td>OOV</td><td>Politie, AVIM, Zorgpartner</td><td>Woon-werkafhankelijkheid en signalen uit dossier.</td></tr>
+          <tr><td>Casus MH-002</td><td><span class="badge mid">In duiding</span></td><td>Aandachtsfunctionaris</td><td>Arbeidsinspectie, RIEC</td><td>Werkgebied en arbeidsmigranten-context.</td></tr>
+          <tr><td>Casus MH-003</td><td><span class="badge low">Monitoren</span></td><td>Sociaal domein</td><td>Zorg- en Veiligheidshuis</td><td>Jeugdkwetsbaarheid en schuldsignalen.</td></tr>
         </tbody>
       </table>
     </div>

@@ -7,25 +7,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="dashboard">
+  <div class="app">
     
     <aside class="sidebar">
       <div class="brand">
-        <div class="brand-dot"></div>
-        <div class="brand-sub">Dashboardomgeving voor mensenhandel en ondermijning.</div>
+        <div class="brand-mark">PGA<span class="x">x</span></div>
+        <div class="brand-copy">Visueel geïnspireerde dashboardomgeving voor mensenhandel en ondermijning.</div>
       </div>
-      <nav class="side-nav"><a href="index.html" class="side-link active"><span class="side-icon">◎</span><span>Dashboard</span></a>
-<a href="trends.html" class="side-link "><span class="side-icon">≋</span><span>Trends</span></a>
-<a href="cijfers.html" class="side-link "><span class="side-icon">▦</span><span>Cijfers</span></a>
-<a href="vergelijking.html" class="side-link "><span class="side-icon">⇄</span><span>Vergelijking</span></a>
-<a href="kaart.html" class="side-link "><span class="side-icon">⌖</span><span>Wijken</span></a>
-<a href="contacten.html" class="side-link "><span class="side-icon">◉</span><span>Contacten</span></a>
-<a href="bronnen.html" class="side-link "><span class="side-icon">◈</span><span>Bronnen</span></a>
-<a href="login.html" class="side-link "><span class="side-icon">◌</span><span>Log In</span></a></nav>
+      <nav class="nav"><a href="index.html" class="active"><span class="icon">◎</span><span>Dashboard</span></a>
+<a href="trends.html" class=""><span class="icon">≋</span><span>Trends</span></a>
+<a href="cijfers.html" class=""><span class="icon">▦</span><span>Cijfers</span></a>
+<a href="vergelijking.html" class=""><span class="icon">⇄</span><span>Vergelijking</span></a>
+<a href="kaart.html" class=""><span class="icon">⌖</span><span>Wijken</span></a>
+<a href="contacten.html" class=""><span class="icon">◉</span><span>Contacten</span></a>
+<a href="bronnen.html" class=""><span class="icon">◈</span><span>Bronnen</span></a>
+<a href="login.html" class=""><span class="icon">◌</span><span>Log In</span></a></nav>
     </aside>
     
     <div class="main">
-      
       <header class="topbar">
         <div class="topbar-inner">
           <div class="tophead">
@@ -39,11 +38,10 @@
             <a class="btn" href="index.html">Dashboard</a>
             <a class="btn" href="kaart.html">Wijkrisico's</a>
             <a class="btn" href="contacten.html">Contactpersonen</a>
-            <a class="btn btn-primary" href="login.html">Log In</a>
+            <a class="btn primary" href="login.html">Log In</a>
           </div>
         </div>
       </header>
-    
       <main class="page">
         
 <section class="hero">
@@ -55,15 +53,41 @@
       <p>De visuele layout van dit dashboard is gebaseerd op PGAx. Het dashboard dient nadrukkelijk ter illustratie en laat zien hoe cijfers, trends, gebiedsprofielen en contactlijnen overzichtelijk kunnen worden samengebracht voor bestuurlijke en operationele ondersteuning.</p>
       <p>Een toekomstige koppeling met PGAx zou vooral waarde hebben voor casusdoorzetting, partneraanhaak, statusoverzicht en het afgeschermd werken met actuele zaken.</p>
     </div>
-
+    <div class="hero-preview">
+      <div class="preview-shell">
+        <div class="preview-grid">
+          <div class="preview-box">
+            <div class="preview-line short"></div>
+            <div class="preview-line long"></div>
+            <div class="preview-line mid"></div>
+            <div class="preview-line long"></div>
+            <span class="preview-btn">Vergadering starten</span>
+          </div>
+          <div>
+            <div class="preview-box" style="margin-bottom:14px">
+              <div class="preview-line long"></div>
+              <div class="preview-line short"></div>
+            </div>
+            <div class="preview-box" style="margin-bottom:14px">
+              <div class="preview-line long"></div>
+              <div class="preview-line short"></div>
+            </div>
+            <div class="preview-box">
+              <div class="preview-line long"></div>
+              <div class="preview-line mid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <div class="stats">
-  <div class="stat-card"><div class="label">Emmen positie mensenhandel</div><div class="value">27</div></div>
-  <div class="stat-card"><div class="label">Totaal ondermijningsrisico</div><div class="value">50</div></div>
-  <div class="stat-card"><div class="label">Problematische schulden</div><div class="value">9,9%</div></div>
-  <div class="stat-card"><div class="label">Landelijk gemelde slachtoffers 2024</div><div class="value">944</div></div>
+  <div class="stat"><div class="label">Emmen positie mensenhandel</div><div class="value">27</div></div>
+  <div class="stat"><div class="label">Totaal ondermijningsrisico</div><div class="value">50</div></div>
+  <div class="stat"><div class="label">Problematische schulden</div><div class="value">9,9%</div></div>
+  <div class="stat"><div class="label">Landelijk gemelde slachtoffers 2024</div><div class="value">944</div></div>
 </div>
 
 <section class="card">
@@ -72,7 +96,7 @@
     <a class="tile purple" href="trends.html"><h3>Trends en ontwikkelingen</h3><p>Landelijke en lokale duiding van subtype-ontwikkelingen en kwetsbaarheid.</p></a>
     <a class="tile yellow" href="cijfers.html"><h3>Cijfers / statistieken</h3><p>Kerncijfers en benchmarkinformatie voor gemeente Emmen.</p></a>
     <a class="tile green" href="vergelijking.html"><h3>Micro en macro vergelijking</h3><p>Landelijk beeld naast Emmen-specifieke context en rangpositie.</p></a>
-    <a class="tile red" href="kaart.html"><h3>Risicogebieden per wijk</h3><p>Indicatieve kaartlaag met wijk- en gebiedsprofielen.</p></a>
+    <a class="tile red" href="kaart.html"><h3>Risicogebieden per wijk</h3><p>Wijkprofielen op basis van jouw aangeleverde kaart.</p></a>
     <a class="tile purple" href="zaken.html"><h3>Lopende zaken</h3><p>Beschermde omgeving voor gemachtigde gebruikers en casusstatus.</p></a>
     <a class="tile yellow" href="contacten.html"><h3>Contactpersonen</h3><p>Snel doorzetten naar OOV, AVIM, Arbeidsinspectie, RIEC en zorg.</p></a>
     <a class="tile green" href="bronnen.html"><h3>Bronnenlijst (APA 7)</h3><p>De onderbouwing achter indicatoren, cijfers en trendblokken.</p></a>
