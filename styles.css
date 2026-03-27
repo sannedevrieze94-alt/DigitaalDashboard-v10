@@ -324,3 +324,49 @@ body.auth .phone-private{display:inline;}
   color:#333;
 }
 .menu-open .menu-dropdown{display:block;}
+
+/* v20 fixes */
+.topbar{position:sticky}
+.topbar-inner{position:relative}
+.header-login{
+  position:absolute;
+  right:20px;
+  top:20px;
+}
+.header-login .login-btn{
+  background:#0ea5e9;
+  color:#fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  display:inline-block;
+}
+.header-menu{
+  position:absolute;
+  right:110px;
+  top:20px;
+}
+.menu-btn{
+  background:#fff;
+  color:#1b2240;
+  border:1px solid #dfe5f2;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+}
+.menu-dropdown{
+  min-width:190px;
+  z-index:50;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* trends 3 donuts */
+.donut-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+}
+@media (max-width:980px){
+  .donut-grid{grid-template-columns:1fr !important;}
+}
